@@ -1,7 +1,7 @@
 # *farm*
 Progetto Laboratorio di Sistemi Operativi, Universita' di Pisa.
 
-Si chiede di realizzare un programma C, denominato farm, che implementa lo schema di comunicazione tra
+Si chiede di realizzare un programma C, denominato __*farm*__, che implementa lo schema di comunicazione tra
 processi e thread mostrato in figura.
 
 <p align="center">
@@ -9,7 +9,7 @@ processi e thread mostrato in figura.
 </p>
 
 __*farm*__ è un programma composto da due processi, il primo denominato *MasterWorker* ed il secondo denominato *Collector*.
-*MasterWorker*, è un processo multi-threaded composto da un thread Master e da ‘*n*’ thread *Worker*
+*MasterWorker*, è un processo multi-threaded composto da un thread *Master* e da ‘*n*’ thread *Worker*
 (il numero di thread Worker può essere variato utilizzando l’argomento opzionale ‘-n’ – vedere nel seguito).
 Il programma prende come argomenti una lista (eventualmente vuota se viene passata l’opzione ‘-d’) di file
 binari contenenti numeri interi lunghi ed un certo numero di argomenti opzionali (le opzioni sono ‘-n’, ‘-q’, ‘-
@@ -19,7 +19,7 @@ processi fa da processo master per la connessione socket, così come la scelta s
 più connessioni, una per ogni *Worker*. Il socket file “__*farm.sck*__”, associato alla connessione AF_LOCAL, deve
 essere creato all’interno della directory del progetto e deve essere cancellato alla terminazione del programma.
 
-Il processo *MasterWorker* legge gli argomenti passati alla funzione main uno alla volta, verificando che siano
+Il processo *MasterWorker* legge gli argomenti passati alla funzione *main* uno alla volta, verificando che siano
 file regolari. Se viene passata l’opzione ‘-d’ che prevede come argomento un nome di directory, viene navigata
 la directory passata come argomento e considerando tutti i file e le directory al suo interno.
 
@@ -44,7 +44,7 @@ calcolo che deve essere effettuato su ogni file è il seguente:
 
 dove N è il numero di interi lunghi (long) contenuti nel file, e *result* è l’intero lungo che dovrà essere inviato
 al Collector. Ad esempio, supponendo che il file “mydir/*fileX.dat*” passato in input come argomento del main
-abbia dimensione 24 bytes, con il seguente contenuto (si ricorda che gli interi lunghi – *long* – sono codificati
+abbia dimensione 24 bytes, con il seguente contenuto (si ricorda che gli interi lunghi –*long*– sono codificati
 con 8 bytes in sistemi Linux a 64bit):
 
 3  
