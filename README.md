@@ -5,7 +5,7 @@ Si chiede di realizzare un programma C, denominato __*farm*__, che implementa lo
 processi e thread mostrato in figura.
 
 <p align="center">
-  <img src="img/figura1.png" style="display: block; margin: 0 auto;">
+  <img src="utility/img/figura1.png" style="display: block; margin: 0 auto;">
 </p>
 
 __*farm*__ è un programma composto da due processi, il primo denominato *MasterWorker* ed il secondo denominato *Collector*.
@@ -39,7 +39,7 @@ La stampa viene ordinata sulla base del risultato in modo crescente (risultato1<
 calcolo che deve essere effettuato su ogni file è il seguente:
 
 <p align="center">
-  <img src="img/figura2.png" style="display: block; margin: 0 auto;">
+  <img src="utility/img/figura2.png" style="display: block; margin: 0 auto;">
 </p>
 
 dove N è il numero di interi lunghi (long) contenuti nel file, e *result* è l’intero lungo che dovrà essere inviato
@@ -51,7 +51,7 @@ con 8 bytes in sistemi Linux a 64bit):
 2  
 4  
 
-il risultato calcolato dal *Worker* sarà: ![](img/figura3.png) , quindi il processo Collector stamperà:  
+il risultato calcolato dal *Worker* sarà: ![](/utility/img/figura3.png) , quindi il processo Collector stamperà:  
  10 mydir/fileX.dat
 
 Gli argomenti che opzionalmente possono essere passati al processo *MasterWorker* sono i seguenti:
@@ -73,6 +73,9 @@ Il segnale SIGPIPE deve essere gestito opportunamente dai due processi.
 __Note__  
 La dimensione dei file in input non è limitata ad un valore massimo. Si supponga che la lunghezza del nome
 dei file (compreso il pathname) sia al massimo 255 caratteri.
+
+__generafile.c__ genera i file per i tests  
+Lo script Bash (__test.sh__) contenente alcuni semplici test che il programma deve superare.
 
 
 
