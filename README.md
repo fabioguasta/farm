@@ -75,7 +75,8 @@ La dimensione dei file in input non è limitata ad un valore massimo. Si suppong
 dei file (compreso il pathname) sia al massimo 255 caratteri.
 
 __generafile.c__ genera i file per i tests  
-Lo script Bash (__test.sh__) contenente alcuni semplici test che il programma deve superare.
+Lo script Bash (__test.sh__) contenente alcuni semplici test che il programma deve superare.  
+I test sono da eseguire su macchina virtuale Xubuntu, [download](http://xubuntu.org/). E' possibile, inoltre, scaricare un disco virtuale compresso dal seguente [link](http://calvados.di.unipi.it/storage/teaching/LinuxVM/xubuntu.vmdk.zip).
 
 
 
